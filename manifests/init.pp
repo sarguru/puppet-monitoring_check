@@ -175,7 +175,7 @@ define monitoring_check (
   $source                = undef,
   $can_override          = true,
   $tags                  = [],
-  $subdue                = undef,
+  $subdue                = hiera("monitoring_check::subdue", undef),
 ) {
 
   include monitoring_check::params
